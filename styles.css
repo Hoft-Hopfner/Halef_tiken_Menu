@@ -1,0 +1,388 @@
+body {
+  background: #222;
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.menu-wrapper {
+  max-width: 430px;
+  margin: 0 auto;
+  background: #18191b;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.wrapper-menu-deco-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-content {
+  flex: 1;
+  max-width: calc(100% - 66px); /* Berücksichtigt Säulenbreite + Abstände */
+}
+
+.menu-deco-column {
+    margin-top: 8%;
+  width: 18px;
+  background: transparent;
+  border: 2px solid #e63a2e;
+  border-radius: 50px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.menu-header {
+  position: relative;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.menu-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  transform-origin: left top;
+}
+
+.menu-title .letter {
+  font-size: 62px;
+  font-weight: 900;
+  color: #e63a2e;
+  font-family: Arial Black, Arial, sans-serif;
+  letter-spacing: -1px;
+  transform: skew(-8deg);
+  line-height: 0.9;
+}
+
+.menu-title .numbers {
+  font-size: 62px;
+  font-weight: 900;
+  color: #e63a2e;
+  font-family: Arial Black, Arial, sans-serif;
+  letter-spacing: -2px;
+  transform: skew(-12deg);
+  margin-left: -3px;
+  line-height: 0.9;
+}
+
+.menu-subtitle {
+  font-size: 26px;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+/* Vertikales Layout statt Grid */
+.menu-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin: 0;
+}
+
+.menu-section {
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #e63a2e;
+  margin-bottom: 15px;
+  font-family: 'Dancing Script', cursive;
+  letter-spacing: 0.5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  line-height: 1.2;
+}
+
+.section-title:first-child {
+  margin-top: 0;
+}
+
+.section-title.wine {
+  font-style: normal;
+}
+
+.menu-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+  font-size: 16px;
+}
+
+.menu-table td {
+  padding: 6px 4px;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+/* Optimierte Spaltenbreiten mit mehr Platz für Preise */
+.menu-table td:first-child {
+  width: 62%; /* Etwas schmaler */
+  text-align: left;
+  padding-right: 10px;
+  white-space: normal;
+}
+
+.menu-table td:nth-child(2) {
+  width: 18%; /* Etwas breiter */
+  text-align: right;
+  padding-right: 10px;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.5); /* Noch etwas dezenter */
+  font-size: 0.95em;
+}
+
+.menu-table td:last-child {
+  width: 20%;
+  text-align: right;
+  font-weight: 700;
+  white-space: nowrap;
+  padding-right: 0;
+}
+
+.menu-table tr {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.menu-footer {
+  margin-top: 35px;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.bottle-section {
+  margin-bottom: 10px;
+}
+
+.menu-back {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+/* Volle Breite für Sektionen */
+.menu-section.full-width {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+/* Neu strukturierte Shisha-Sektion */
+.shisha-container {
+  margin-top: 45px;
+  padding: 35px 15px 25px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.shisha-container .section-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  color: #e63a2e;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: none;
+  font-weight: 400;
+}
+
+.shisha-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 16px;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.shisha-list span {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 15px;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.shisha-list span.highlighted {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 430px) {
+  .menu-wrapper {
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 15px 20px 15px 15px;
+  }
+
+  .menu-content {
+    max-width: calc(100% - 56px);
+  }
+
+  .menu-deco-column {
+    width: 16px;
+    border-width: 1.5px;
+  }
+
+  .menu-title .letter {
+    font-size: 44px;
+  }
+
+  .menu-title .numbers {
+    font-size: 52px;
+  }
+
+  .menu-subtitle {
+    font-size: 22px;
+    top: 12px;
+  }
+
+  .menu-section {
+    margin-top: 30px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .menu-table {
+    font-size: 15px;
+  }
+
+  .menu-table td:first-child {
+    width: 58%;
+  }
+
+  .menu-table td:nth-child(2) {
+    width: 20%;
+  }
+
+  .menu-table td:last-child {
+    width: 22%;
+    padding-right: 0;
+  }
+
+  .shisha-container .section-title {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .shisha-list {
+    gap: 10px 14px;
+    max-width: 340px;
+  }
+
+  .shisha-list span {
+    font-size: 14px;
+  }
+
+  .bottle-brand {
+    font-size: 15px;
+  }
+
+  .bottle-mix,
+  .bottle-price {
+    font-size: 14px;
+  }
+
+  .bottle-amount {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .menu-wrapper {
+    padding: 12px 16px 12px 12px;
+  }
+
+  .menu-content {
+    max-width: calc(100% - 46px);
+  }
+
+  .menu-deco-column {
+    width: 14px;
+    border-width: 1.5px;
+  }
+
+  .menu-title .letter {
+    font-size: 40px;
+  }
+
+  .menu-title .numbers {
+    font-size: 48px;
+  }
+
+  .menu-subtitle {
+    font-size: 20px;
+  }
+
+  .menu-section {
+    margin-top: 25px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .menu-table {
+    font-size: 14px;
+  }
+
+  .menu-table td {
+    padding: 5px 3px;
+  }
+
+  .bottle-brand {
+    font-size: 14px;
+  }
+
+  .bottle-mix,
+  .bottle-price {
+    font-size: 13px;
+  }
+
+  .bottle-amount {
+    font-size: 12px;
+  }
+
+  .shisha-container .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .shisha-list {
+    gap: 8px 12px;
+    max-width: 300px;
+  }
+
+  .shisha-list span {
+    font-size: 13px;
+  }
+
+  .menu-table td:last-child {
+    padding-right: 0;
+  }
+} 
